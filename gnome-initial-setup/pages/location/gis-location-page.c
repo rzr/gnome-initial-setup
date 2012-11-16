@@ -255,8 +255,7 @@ gis_prepare_location_page (SetupData *setup)
                                                 NULL,
                                                 &error);
   if (data->dtm == NULL) {
-    g_error ("Failed to create proxy for timedated: %s", error->message);
-    exit (1);
+    g_warning ("Failed to create proxy for timedated: %s", error->message);
   }
 
   data->map = cc_timezone_map_new ();
@@ -282,7 +281,10 @@ gis_prepare_location_page (SetupData *setup)
   gtk_grid_attach (GTK_GRID (frame), entry, 0, 1, 2, 1);
 #endif
 
-  timezone = timedate1_get_timezone (data->dtm);
+  if (data->dtm)
+    timezone = timedate1_get_timezone (data->dtm);
+  else
+    timezone = DEFAULT_TZ;
 
   if (!cc_timezone_map_set_timezone (data->map, timezone)) {
     g_warning ("Timezone '%s' is unhandled, setting %s as default", timezone, DEFAULT_TZ);

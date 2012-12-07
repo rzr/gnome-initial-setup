@@ -123,6 +123,7 @@ gnome-initial-setup/pages/location/Makefile
 gnome-initial-setup/pages/network/Makefile
 gnome-initial-setup/pages/goa/Makefile
 gnome-initial-setup/pages/summary/Makefile
+gnome-initial-setup/pages/keyboard/Makefile
 po/Makefile.in
 player/Makefile
 ])

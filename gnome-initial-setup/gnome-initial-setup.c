@@ -44,6 +44,7 @@
 #include "pages/network/gis-network-page.h"
 #include "pages/goa/gis-goa-page.h"
 #include "pages/summary/gis-summary-page.h"
+#include "pages/keyboard/gis-keyboard-page.h"
 
 /* main {{{1 */
 
@@ -51,6 +52,7 @@ static void
 rebuild_pages_cb (GisDriver *driver)
 {
   gis_prepare_language_page (driver);
+  gis_prepare_keyboard_page (driver);
   gis_prepare_eula_pages (driver);
   gis_prepare_network_page (driver);
   gis_prepare_account_page (driver);

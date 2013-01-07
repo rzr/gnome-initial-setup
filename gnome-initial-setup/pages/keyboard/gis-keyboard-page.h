@@ -68,6 +68,8 @@ struct _GisKeyboardPageClass
 
 GType gis_keyboard_page_get_type (void) G_GNUC_CONST;
 
+const gchar *gis_keyboard_page_get_id ();
+
 void  gis_prepare_keyboard_page (GisDriver *driver);
 
 G_END_DECLS

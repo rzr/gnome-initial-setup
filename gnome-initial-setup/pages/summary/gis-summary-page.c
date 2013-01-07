@@ -320,3 +320,9 @@ gis_prepare_summary_page (GisDriver *driver)
                                      "driver", driver,
                                      NULL));
 }
+
+const gchar *
+gis_summary_page_get_id ()
+{
+  return PAGE_ID;
+}

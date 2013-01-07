@@ -102,3 +102,9 @@ gis_prepare_keyboard_page (GisDriver *driver)
                                      "driver", driver,
                                      NULL));
 }
+
+const gchar *
+gis_keyboard_page_get_id ()
+{
+    return PAGE_ID;
+}

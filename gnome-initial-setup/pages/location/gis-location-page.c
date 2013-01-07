@@ -380,3 +380,9 @@ gis_prepare_location_page (GisDriver *driver)
                                      "driver", driver,
                                      NULL));
 }
+
+const gchar *
+gis_location_page_get_id ()
+{
+    return PAGE_ID;
+}

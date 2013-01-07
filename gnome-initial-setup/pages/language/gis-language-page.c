@@ -341,3 +341,9 @@ gis_prepare_language_page (GisDriver *driver)
                                      "driver", driver,
                                      NULL));
 }
+
+const gchar *
+gis_language_page_get_id ()
+{
+    return PAGE_ID;
+}

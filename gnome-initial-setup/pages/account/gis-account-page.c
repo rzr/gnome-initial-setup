@@ -937,3 +937,9 @@ gis_prepare_account_page (GisDriver *driver)
                                      "driver", driver,
                                      NULL));
 }
+
+const gchar *
+gis_account_page_get_id ()
+{
+  return PAGE_ID;
+}

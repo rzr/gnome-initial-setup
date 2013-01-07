@@ -55,6 +55,8 @@ struct _GisLocationPageClass
 
 GType gis_location_page_get_type (void);
 
+const gchar *gis_location_page_get_id ();
+
 void gis_prepare_location_page (GisDriver *driver);
 
 G_END_DECLS

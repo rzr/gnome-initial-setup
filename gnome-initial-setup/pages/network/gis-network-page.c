@@ -735,3 +735,9 @@ gis_prepare_network_page (GisDriver *driver)
                                      "driver", driver,
                                      NULL));
 }
+
+const gchar *
+gis_network_page_get_id ()
+{
+    return PAGE_ID;
+}

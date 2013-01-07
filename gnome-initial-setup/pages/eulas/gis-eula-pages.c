@@ -23,6 +23,8 @@
 
 /* EULA pages {{{1 */
 
+#define PAGE_ID "eula"
+
 #include "config.h"
 #include "gis-eula-pages.h"
 #include "utils.h"
@@ -375,7 +377,7 @@ gis_eula_page_init (GisEulaPage *page)
 }
 
 void
-gis_prepare_eula_pages (GisDriver *driver)
+gis_prepare_eula_page (GisDriver *driver)
 {
   gchar *eulas_dir_path;
   GFile *eulas_dir;
@@ -420,4 +422,10 @@ gis_prepare_eula_pages (GisDriver *driver)
 
   g_object_unref (eulas_dir);
   g_clear_object (&enumerator);
+}
+
+const gchar *
+gis_eula_page_get_id ()
+{
+    return PAGE_ID;
 }

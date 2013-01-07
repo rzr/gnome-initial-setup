@@ -54,6 +54,7 @@ struct _GisSummaryPageClass
 GType gis_summary_page_get_type (void);
 
 void gis_prepare_summary_page (GisDriver *driver);
+const gchar *gis_summary_page_get_id ();
 
 G_END_DECLS
 

@@ -369,3 +369,9 @@ gis_prepare_goa_page (GisDriver *driver)
                                      "driver", driver,
                                      NULL));
 }
+
+const gchar *
+gis_goa_page_get_id ()
+{
+  return PAGE_ID;
+}

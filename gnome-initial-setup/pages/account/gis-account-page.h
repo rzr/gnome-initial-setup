@@ -55,6 +55,9 @@ struct _GisAccountPageClass
 
 GType gis_account_page_get_type (void);
 
+
+const gchar *gis_account_page_get_id ();
+
 void gis_prepare_account_page (GisDriver *driver);
 
 G_END_DECLS

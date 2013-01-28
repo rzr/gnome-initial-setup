@@ -44,7 +44,6 @@
 #include "pages/language/gis-language-page.h"
 #include "pages/keyboard/gis-keyboard-page.h"
 #include "pages/eulas/gis-eula-pages.h"
-#include "pages/network/gis-network-page.h"
 #include "pages/account/gis-account-page.h"
 #include "pages/location/gis-location-page.h"
 #include "pages/goa/gis-goa-page.h"
@@ -83,7 +82,6 @@ new_pages_table (void)
   ADD_PAGE (pages, language);
   ADD_PAGE (pages, keyboard);
   ADD_PAGE (pages, eula);
-  ADD_PAGE (pages, network);
   ADD_PAGE (pages, account);
   ADD_PAGE (pages, location);
   ADD_PAGE (pages, goa);

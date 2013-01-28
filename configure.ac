@@ -31,10 +31,6 @@ ac_configure_args=$prev_ac_configure_args
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"$ac_top_build_prefix"egg-list-box
 
 PKG_CHECK_MODULES(INITIAL_SETUP,
-                  NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-gtk >= $NETWORK_MANAGER_REQUIRED_VERSION
                   accountsservice
                   gnome-desktop-3.0
                   gstreamer-1.0
@@ -142,7 +138,6 @@ gnome-initial-setup/pages/language/Makefile
 gnome-initial-setup/pages/eulas/Makefile
 gnome-initial-setup/pages/account/Makefile
 gnome-initial-setup/pages/location/Makefile
-gnome-initial-setup/pages/network/Makefile
 gnome-initial-setup/pages/goa/Makefile
 gnome-initial-setup/pages/summary/Makefile
 gnome-initial-setup/pages/keyboard/Makefile

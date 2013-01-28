@@ -14,12 +14,12 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [gettext package])
 
 AM_GLIB_GNU_GETTEXT
 
-NETWORK_MANAGER_REQUIRED_VERSION=0.9.6.4
 GLIB_REQUIRED_VERSION=2.29.4
 GTK_REQUIRED_VERSION=3.7.7
 CLUTTER_REQUIRED_VERSION=1.11.3
 PANGO_REQUIRED_VERSION=1.32.5
 IBUS_REQUIRED_VERSION=1.4.99
+CONNMAN_REQUIRED_VERSION=1.9
 
 # EggListBox submodule
 prev_top_build_prefix=$ac_top_build_prefix
@@ -30,11 +30,11 @@ ac_configure_args=$prev_ac_configure_args
 
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"$ac_top_build_prefix"egg-list-box
 
+# We don't need the cflags or libs as we talk to connman through dbus
+# Plus the connman.pc file contains bad options libs
+PKG_CHECK_MODULES(CONNMAN, connman >= $CONNMAN_REQUIRED_VERSION)
+
 PKG_CHECK_MODULES(INITIAL_SETUP,
-                  NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-gtk >= $NETWORK_MANAGER_REQUIRED_VERSION
                   accountsservice
                   gnome-desktop-3.0
                   gstreamer-1.0

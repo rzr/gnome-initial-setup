@@ -3267,6 +3267,7 @@ gis_network_page_constructed (GObject *object)
                                                 "network-settings"));
 
   gis_page_set_title (GIS_PAGE (page), _("Network setup"));
+  gis_page_set_complete (GIS_PAGE (page), TRUE);
   gtk_widget_show (GTK_WIDGET (page));
 }
 

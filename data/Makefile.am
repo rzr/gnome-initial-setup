@@ -26,9 +26,7 @@ desktop_DATA =						\
 
 EXTRA_DIST =						\
 	20-gnome-initial-setup.rules			\
-	gnome-welcome-tour				\
 	setup-shell.desktop				\
-	gnome-welcome-tour.desktop.in.in		\
 	gnome-initial-setup-first-login.desktop.in.in	\
 	gnome-initial-setup.desktop.in.in		\
 	gnome-initial-setup-copy-worker.desktop.in.in	\
@@ -41,16 +39,10 @@ CLEANFILES =						\
 	gnome-initial-setup-copy-worker.desktop.in	\
 	gnome-initial-setup-copy-worker.desktop		\
 	gnome-initial-setup-first-login.desktop		\
-	gnome-welcome-tour.desktop.in			\
-	gnome-welcome-tour.desktop			\
 	$(NULL)
 
 autostartdir = $(sysconfdir)/xdg/autostart
 autostart_DATA =					\
-	gnome-welcome-tour.desktop			\
 	gnome-initial-setup-copy-worker.desktop		\
 	gnome-initial-setup-first-login.desktop		\
 	$(NULL)
-
-libexec_SCRIPTS =						\
-	gnome-welcome-tour

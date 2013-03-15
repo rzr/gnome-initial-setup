@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<interface>
+  <!-- interface-requires gtk+ 3.0 -->
+  <object class="GtkListStore" id="liststore_services">
+    <columns>
+      <!-- column-name icon -->
+      <column type="gboolean"/>
+      <!-- column-name pulse -->
+      <column type="guint"/>
+      <!-- column-name pulse_id -->
+      <column type="guint"/>
+      <!-- column-name name -->
+      <column type="gchararray"/>
+      <!-- column-name state -->
+      <column type="gchararray"/>
+      <!-- column-name security_icon -->
+      <column type="gchararray"/>
+      <!-- column-name type -->
+      <column type="gchararray"/>
+      <!-- column-name security -->
+      <column type="gchararray"/>
+      <!-- column-name strength_icon -->
+      <column type="gchararray"/>
+      <!-- column-name strength -->
+      <column type="gchararray"/>
+      <!-- column-name favorite -->
+      <column type="gboolean"/>
+      <!-- column-name service -->
+      <column type="GObject"/>
+      <!-- column-name prop_id -->
+      <column type="gint"/>
+    </columns>
+  </object>
+  <object class="GtkVBox" id="connman-page">
+    <property name="visible">True</property>
+    <property name="can_focus">False</property>
+    <property name="margin-left">80</property>
+    <property name="margin-right">80</property>
+    <property name="margin_top">6</property>
+    <property name="margin_bottom">6</property>
+    <property name="spacing">12</property>
+
+    <child>
+      <object class="GtkLabel" id="label24">
+        <property name="visible">True</property>
+        <property name="can_focus">False</property>
+        <property name="halign">start</property>
+        <property name="valign">start</property>
+        <property name="margin_bottom">18</property>
+        <property name="xalign">0</property>
+        <property name="label" translatable="yes">Select a network</property>
+        <attributes>
+          <attribute name="weight" value="bold"/>
+          <attribute name="scale" value="1.2"/>
+        </attributes>
+      </object>
+      <packing>
+        <property name="expand">False</property>
+        <property name="fill">False</property>
+        <property name="position">0</property>
+      </packing>
+    </child>
+
+
+    <child>
+      <object class="GtkScrolledWindow" id="network-scrolledwindow">
+        <property name="visible">True</property>
+        <property name="hscrollbar-policy">never</property>
+        <property name="vscrollbar-policy">automatic</property>
+        <property name="shadow-type">in</property>
+        <child>
+          <object class="GtkViewport" id="viewport1">
+            <property name="visible">True</property>
+            <child>
+              <object class="GtkTreeView" id="treeview_services">
+                <property name="visible">True</property>
+                <property name="can_focus">True</property>
+                <property name="hexpand">True</property>
+                <property name="vexpand">True</property>
+                <property name="model">liststore_services</property>
+                <property name="headers_visible">False</property>
+                <property name="search_column">0</property>
+                <property name="level_indentation">6</property>
+                <child internal-child="selection">
+                  <object class="GtkTreeSelection" id="treeview-selection"/>
+                </child>
+                <child>
+                  <object class="GtkTreeViewColumn" id="treeview_list_column">
+                    <property name="spacing">2</property>
+                  </object>
+                </child>
+              </object>
+            </child>
+          </object>
+        </child>
+      </object>
+    </child>
+  </object>
+</interface>

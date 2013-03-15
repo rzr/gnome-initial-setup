@@ -3,7 +3,7 @@ SUBDIRS = \
 	language \
 	keyboard \
 	eulas \
-	network \
+	connman \
 	account \
 	location \
 	goa \

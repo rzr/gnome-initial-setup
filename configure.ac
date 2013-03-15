@@ -14,12 +14,17 @@ AC_DEFINE_UNQUOTED(GETTEXT_PACKAGE, "$GETTEXT_PACKAGE", [gettext package])
 
 AM_GLIB_GNU_GETTEXT
 
-NETWORK_MANAGER_REQUIRED_VERSION=0.9.6.4
 GLIB_REQUIRED_VERSION=2.29.4
 GTK_REQUIRED_VERSION=3.7.11
 PANGO_REQUIRED_VERSION=1.32.5
 IBUS_REQUIRED_VERSION=1.4.99
 GNOME_DESKTOP_REQUIRED_VERSION=3.7.5
+
+CONNMAN_REQUIRED_VERSION=1.9
+
+# We talk to connman through dbus so this is just here to make sure we have
+# connman
+PKG_CHECK_MODULES(CONNMAN, connman >= $CONNMAN_REQUIRED_VERSION)
 
 # EggListBox submodule
 prev_top_build_prefix=$ac_top_build_prefix
@@ -31,10 +36,6 @@ ac_configure_args=$prev_ac_configure_args
 export PKG_CONFIG_PATH=$PKG_CONFIG_PATH:"$ac_top_build_prefix"egg-list-box
 
 PKG_CHECK_MODULES(INITIAL_SETUP,
-                  NetworkManager >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-glib >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-util >= $NETWORK_MANAGER_REQUIRED_VERSION
-                  libnm-gtk >= $NETWORK_MANAGER_REQUIRED_VERSION
                   accountsservice
                   gnome-desktop-3.0 >= $GNOME_DESKTOP_REQUIRED_VERSION
                   gstreamer-1.0
@@ -118,7 +119,7 @@ gnome-initial-setup/pages/language/Makefile
 gnome-initial-setup/pages/eulas/Makefile
 gnome-initial-setup/pages/account/Makefile
 gnome-initial-setup/pages/location/Makefile
-gnome-initial-setup/pages/network/Makefile
+gnome-initial-setup/pages/connman/Makefile
 gnome-initial-setup/pages/goa/Makefile
 gnome-initial-setup/pages/summary/Makefile
 gnome-initial-setup/pages/keyboard/Makefile

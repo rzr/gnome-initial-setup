@@ -43,7 +43,7 @@
 #include "pages/language/gis-language-page.h"
 #include "pages/keyboard/gis-keyboard-page.h"
 #include "pages/eulas/gis-eula-pages.h"
-#include "pages/network/gis-network-page.h"
+#include "pages/connman/gis-connman-page.h"
 #include "pages/account/gis-account-page.h"
 #include "pages/location/gis-location-page.h"
 #include "pages/goa/gis-goa-page.h"
@@ -70,7 +70,7 @@ static PageData page_table[] = {
   PAGE (language),
   PAGE (keyboard),
   PAGE (eula),
-  PAGE (network),
+  PAGE (connman),
   PAGE (account),
   PAGE (location),
   PAGE (goa),

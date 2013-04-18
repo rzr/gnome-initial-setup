@@ -43,7 +43,8 @@ BUILT_SOURCES =			\
 libgisconnman_la_SOURCES =	gis-connman-page.c	\
 				gis-connman-page.h	\
 				$(dbus_built_sources)	\
-				$(BUILT_SOURCES)
+				$(BUILT_SOURCES) \
+				manager.h
 
 
 libgisconnman_la_CFLAGS = $(INITIAL_SETUP_CFLAGS) -I "$(srcdir)/../.."
